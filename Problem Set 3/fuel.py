@@ -1,20 +1,25 @@
 def main():
-    fraction = input("What fraction of the tank is full?").split("/")
-    try:
-        numerator = int(fraction[0])
-        denominator = int(fraction[1])
-    except (ValueError, ZeroDivisionError):
-        print("That was not an acceptable fraction. Please try again.")
+    percent = get_percent()
 
-    print(f"{fuel_percentage(numerator, denominator)}%")
+    match percent:
+        case 99 | 100:
+            print("F")
+        case 0 | 1:
+            print("E")
+        case _:
+            print(f"{percent}%")
 
 
-def fuel_percentage(x, y):
-    try:
-        percentage = int(x/y)
-        return percentage
-    except (ValueError, ZeroDivisionError):
-        print("That was not an acceptable fraction. Please try again.")
+def get_percent():
+    while True:
+        try:
+            fraction = input("What fraction of the tank is full?").split("/")
+            numerator = int(fraction[0])
+            denominator = int(fraction[1])
+            return round((numerator/denominator)*100)
+        except (ValueError, ZeroDivisionError, IndexError)  :
+            print("That was not an acceptable fraction. Please try again.")
+
 
 
 main()
