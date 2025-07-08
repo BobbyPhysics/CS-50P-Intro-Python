@@ -13,9 +13,6 @@ months = [
     "December"
 ]
 
-def main():
-    format_date()
-
 def format_date():
     while True:
         # get user input in form mm/dd/yyyy or month dd, yyyy
@@ -42,4 +39,8 @@ def format_date():
                 break
     print(f"{year}-{int(month):02}-{int(day):02}")
 
-main()
+def main():
+    format_date()
+
+if __name__ == "__main__":
+    main()

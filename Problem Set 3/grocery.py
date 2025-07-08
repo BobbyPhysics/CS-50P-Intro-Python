@@ -1,6 +1,3 @@
-def main():
-    get_item()
-
 def get_item():
     grocery_list = {}
     while True:
@@ -15,5 +12,8 @@ def get_item():
                 print(f"{grocery_list[key]} {key}\n")
             break
 
+def main():
+    get_item()
 
-main()
+if __name__ == "__main__":
+    main()

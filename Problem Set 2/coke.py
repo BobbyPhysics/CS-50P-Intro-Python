@@ -11,7 +11,7 @@ currency = [5, 10, 25]
 while payment < 50:
     coin = int(input("Insert Coin:"))
 
-    if coin in currency:
+    if coin in currency: # rebalance payment and amount_due
         payment = payment + coin
         amount_due = amount_due - coin
 

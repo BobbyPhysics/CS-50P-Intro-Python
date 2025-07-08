@@ -11,13 +11,6 @@
 # The first number used cannot be a ‘0’.”
 # “No periods, spaces, or punctuation marks are allowed.”
 
-def main():
-    plate = input("Plate: ")
-    if is_valid(plate):
-        print("Valid")
-    else:
-        print("Invalid")
-
 def is_valid(s):
     pattern = r"^[a-zA-Z]{2}[a-zA-Z1-9]{0,4}((?<=[1-9])[0-9]){0,4}$"
     if 2 < len(s) > 6:
@@ -30,4 +23,12 @@ def is_valid(s):
 
 import re
 
-main()
+def main():
+    plate = input("Plate: ")
+    if is_valid(plate):
+        print("Valid")
+    else:
+        print("Invalid")
+
+if __name__ == "__main__":
+    main()

@@ -1,14 +1,3 @@
-def main():
-    percent = get_percent()
-
-    match percent:
-        case 99 | 100:
-            print("F")
-        case 0 | 1:
-            print("E")
-        case _:
-            print(f"{percent}%")
-
 def get_percent():
     while True:
         try:
@@ -21,5 +10,16 @@ def get_percent():
         except (ValueError, ZeroDivisionError, IndexError)  :
             print("That was not an acceptable fraction. Please try again.")
 
+def main():
+    percent = get_percent()
 
-main()
+    match percent:
+        case 99 | 100:
+            print("F")
+        case 0 | 1:
+            print("E")
+        case _:
+            print(f"{percent}%")
+
+if __name__ == "__main__":
+    main()
