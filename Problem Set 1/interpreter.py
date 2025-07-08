@@ -9,7 +9,7 @@
 
 def main():
     expression = input("What is your question?")
-    x, y, z = expression.split(" ")
+    x, y, z = expression.split(" ") # splits the string where there are spaces
     x = int(x)
     z = int(z)
     if y=="+":

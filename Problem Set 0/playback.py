@@ -1,3 +1,3 @@
-input = input()
-slowed = input.replace(' ', '...')
+input = input() 
+slowed = input.replace(' ', '...') # replace spaces with ellipses
 print(slowed)

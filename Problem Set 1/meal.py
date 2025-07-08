@@ -4,6 +4,13 @@
 # And assume that each meal’s time range is inclusive. 
 # For instance, whether it’s 7:00, 7:01, 7:59, or 8:00, or anytime in between, it’s time for breakfast.
 
+def convert(time): # converts time from text into float
+    split_time = time.split(":")
+    hours = float(split_time[0])
+    minutes = float(split_time[1])/60
+
+    return hours+minutes
+
 def main():
     time = input("What time is it?")
     converted_time = convert(time)
@@ -16,14 +23,6 @@ def main():
         print("dinner time")
     else:
         return
-
-
-def convert(time):
-    split_time = time.split(":")
-    hours = float(split_time[0])
-    minutes = float(split_time[1])/60
-
-    return hours+minutes
 
 if __name__ == "__main__":
     main()

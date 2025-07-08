@@ -10,9 +10,6 @@ menu = {
     "Tortilla Salad": 8.00
 }
 
-def main():
-    get_order()
-
 def get_order():
     total = 0
     while True:
@@ -27,4 +24,8 @@ def get_order():
             print("We don't have those.")
 
 
-main()
+def main():
+    get_order()
+
+if __name__ == "__main__":
+    main()

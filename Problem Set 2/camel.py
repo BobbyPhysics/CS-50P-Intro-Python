@@ -6,6 +6,6 @@ text = input("write in camelCase: ")
 
 for i in text:
     if i.isupper():
-       text = text.replace(i, "_"+i.lower())
+       text = text.replace(i, "_"+i.lower()) # replaces uppercase with _lowercase
 
 print(text)

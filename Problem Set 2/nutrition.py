@@ -3,7 +3,7 @@
 # Capitalization aside, assume that users will input fruits exactly as written in the poster (e.g., strawberries, not strawberry). 
 # Ignore any input that isn’t a fruit.
 
-fruits = [
+fruits = [ # dictionary of fruits
     {"fruit":"apple", "calories":130},
     {"fruit":"avocado", "calories":50},
     {"fruit":"banana", "calories":110},
@@ -27,13 +27,14 @@ fruits = [
 ]
 
 
-def main():
-    item = input("Item: ").lower()
-    return calories_in_fruit(item)
-
 def calories_in_fruit(i):
     for fruit in fruits:
          if fruit["fruit"]==i:
                print(fruit["calories"])
 
-main()
+def main():
+    item = input("Item: ").lower()
+    return calories_in_fruit(item)
+
+if __name__ == "__main__":
+    main()

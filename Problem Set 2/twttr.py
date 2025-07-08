@@ -13,4 +13,8 @@ def vowel_remover(string):
             output += letter
     print(output)
 
-vowel_remover(user_input)
+def main():
+    vowel_remover(user_input)
+
+if __name__ == "__main__":
+    main()

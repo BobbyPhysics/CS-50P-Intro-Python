@@ -1,7 +1,3 @@
-def main():
-    number = get_number()
-    meow(number)
-
 def get_number():
     while True:
         n = int(input("How many meows?"))
@@ -12,5 +8,9 @@ def meow(n):
     for _ in range(n):
         print("meow")
 
+def main():
+    number = get_number()
+    meow(number)
 
-main()
+if __name__ == "__main__":
+    main()
