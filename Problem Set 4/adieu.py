@@ -26,6 +26,5 @@ def main():
     get_names(name_list)
     bid_adieu(name_list)
 
-
 if __name__ == "__main__":
     main()
