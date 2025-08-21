@@ -15,11 +15,11 @@ def bid_adieu(list):
     joined_names = ", ".join(list[:-1])
 
     if len(list) == 1:
-        print(f"Adieu, adieu, to {list[0]}.")
+        print(f"Adieu, adieu, to {list[0]}")
     elif len(list) == 2:
-        print(f"Adieu, adieu, to {list[0]} and {list[1]}.")
+        print(f"Adieu, adieu, to {list[0]} and {list[1]}")
     else:
-        print(f"Adieu, adieu, to {joined_names}, and {list[-1]}.")
+        print(f"Adieu, adieu, to {joined_names}, and {list[-1]}")
 
 def main():
     name_list = []
